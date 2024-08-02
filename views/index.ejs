@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Mini Message Board</title>
+    </head>
+    <body>
+        <h1>Mini Message Board</h1>
+        <ul>
+            <% for (let i = 0; i < messages.length; i++) { %>
+                <li>
+                    <h2 name="text"> <%= messages[i].text%></h2>
+                    <p name="user"> User: <%= messages[i].user%></p>
+                    <p name="date"> Date: <%= messages[i].added%></p>
+                    <a href="/message/<%= i %>">Open the message</a>
+                </li>
+            <% } %>
+        </ul>
+        <a href="/new">Create a new message</a>
+    </body>
+</html>
